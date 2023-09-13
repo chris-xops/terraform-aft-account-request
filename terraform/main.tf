@@ -1,27 +1,27 @@
-module "sandbox" {
+module "cds" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "<ACCOUNT EMAIL>"
-    AccountName               = "sandbox-aft"
+    AccountEmail              = "wareroom-darnel-first@xperiencops.com"
+    AccountName               = "cds-tenant1-aft"
     ManagedOrganizationalUnit = "Learn AFT"
-    SSOUserEmail              = "<SSO EMAIL>"
-    SSOUserFirstName          = "Sandbox"
+    SSOUserEmail              = "chris@xperiencops.com"
+    SSOUserFirstName          = "CDS1"
     SSOUserLastName           = "AFT"
   }
 
   account_tags = {
-    "Learn Tutorial" = "AFT"
+    "Managed_by" = "AFT"
   }
 
   change_management_parameters = {
-    change_requested_by = "HashiCorp Learn"
-    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
+    change_requested_by = "XOPS DevOps"
+    change_reason       = "CDS single tenant account creation"
   }
 
   custom_fields = {
-    group = "non-prod"
+    group = "prod"
   }
 
-  account_customizations_name = "sandbox"
+  account_customizations_name = "Costumer Data Store Single Tenant Account"
 }
