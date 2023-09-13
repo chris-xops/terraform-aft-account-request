@@ -4,7 +4,7 @@ module "cds" {
   control_tower_parameters = {
     AccountEmail              = "wareroom-darnel-first@xperiencops.com"
     AccountName               = "cds-tenant1-aft"
-    ManagedOrganizationalUnit = "Learn AFT"
+    ManagedOrganizationalUnit = "CDS"
     SSOUserEmail              = "chris@xperiencops.com"
     SSOUserFirstName          = "CDS1"
     SSOUserLastName           = "AFT"
