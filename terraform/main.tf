@@ -23,7 +23,7 @@ module "cds" {
     group = "prod"
   }
 
-  account_customizations_name = "Costumer Data Store Single Tenant Account"
+  account_customizations_name = "cds"
 }
 
 module "cds2" {
@@ -51,5 +51,5 @@ module "cds2" {
     group = "prod"
   }
 
-  account_customizations_name = "Costumer Data Store Single Tenant Account"
+  account_customizations_name = "cds2"
 }
