@@ -53,3 +53,33 @@ module "cds2" {
 
   account_customizations_name = "cds2"
 }
+
+module "xops_platform" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "eerie-edwin-seamy@xops.io"
+    AccountName               = "xops-platform"
+    ManagedOrganizationalUnit = "Platform"
+    SSOUserEmail              = "chris@xperiencops.com"
+    SSOUserFirstName          = "Admin"
+    SSOUserLastName           = "AFT"
+  }
+
+  account_tags = {
+    "Managed_by" = "AFT"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "XOPS DevOps"
+    change_reason       = "CDS single tenant account creation"
+  }
+
+  custom_fields = {
+    group = "prod"
+    vpc_cidr = "10.46"
+    vpc_name = "xops-platform-vpc-prod"
+  }
+
+  account_customizations_name = "platform"
+}
