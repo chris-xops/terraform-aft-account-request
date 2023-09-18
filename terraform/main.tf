@@ -21,6 +21,8 @@ module "cds" {
 
   custom_fields = {
     group = "prod"
+    vpc_cidr = "10.44"
+    vpc_name = "cds1-vpc-prod"
   }
 
   account_customizations_name = "cds"
@@ -49,9 +51,11 @@ module "cds2" {
 
   custom_fields = {
     group = "prod"
+    vpc_cidr = "10.45"
+    vpc_name = "cds2-vpc-prod"
   }
 
-  account_customizations_name = "cds2"
+  account_customizations_name = "cds"
 }
 
 module "xops_platform" {
