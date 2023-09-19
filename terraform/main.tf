@@ -83,6 +83,8 @@ module "xops_platform" {
     group = "prod"
     vpc_cidr = "10.46"
     vpc_name = "xops-platform-vpc-prod"
+    vpc_cidr_2 = "10.47"
+    vpc_name_2 = "xops-platform-vpc-prod-west"
   }
 
   account_customizations_name = "platform"
