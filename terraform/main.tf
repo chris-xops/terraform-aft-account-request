@@ -23,6 +23,8 @@ module "cds" {
     group = "prod"
     vpc_cidr = "10.44"
     vpc_name = "cds1-vpc-prod"
+    vpc_cidr_2 = "10.48"
+    vpc_name_2 = "cds1-vpc-prod-west"
   }
 
   account_customizations_name = "cds"
@@ -53,6 +55,8 @@ module "cds2" {
     group = "prod"
     vpc_cidr = "10.45"
     vpc_name = "cds2-vpc-prod"
+    vpc_cidr_2 = "10.49"
+    vpc_name_2 = "cds1-vpc-prod-west"
   }
 
   account_customizations_name = "cds"
