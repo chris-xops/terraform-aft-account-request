@@ -66,8 +66,8 @@ module "xops_platform" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "eerie-edwin-seamy@xops.io"
-    AccountName               = "xops-platform"
+    AccountEmail              = "aws-platform-platform-prod@xops.io"
+    AccountName               = "xplatform-prod"
     ManagedOrganizationalUnit = "Platform"
     SSOUserEmail              = "chris@xperiencops.com"
     SSOUserFirstName          = "Admin"
