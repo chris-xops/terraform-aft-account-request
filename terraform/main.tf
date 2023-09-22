@@ -2,8 +2,8 @@ module "cds" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "wareroom-darnel-first@xperiencops.com"
-    AccountName               = "cds1-aft"
+    AccountEmail              = "aws-cmdb-sandbox@xops.io"
+    AccountName               = "cmdb-sandbox"
     ManagedOrganizationalUnit = "CDS"
     SSOUserEmail              = "chris@xperiencops.com"
     SSOUserFirstName          = "CDS1"
@@ -22,9 +22,9 @@ module "cds" {
   custom_fields = {
     group = "prod"
     vpc_cidr = "10.44"
-    vpc_name = "cds1-vpc-prod"
+    vpc_name = "cmdb-sandbox-vpc-prod"
     vpc_cidr_2 = "10.48"
-    vpc_name_2 = "cds1-vpc-prod-west"
+    vpc_name_2 = "cmdb-sandbox-vpc-prod-west"
   }
 
   account_customizations_name = "cds"
