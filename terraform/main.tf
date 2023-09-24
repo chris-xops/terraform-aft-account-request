@@ -30,12 +30,44 @@ module "cds" {
   account_customizations_name = "cds"
 }
 
+module "cmdb-echo" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "aws-cmdb-echo@xops.io"
+    AccountName               = "cmdb-echo"
+    ManagedOrganizationalUnit = "CDS"
+    SSOUserEmail              = "chris@xperiencops.com"
+    SSOUserFirstName          = "CDS1"
+    SSOUserLastName           = "AFT"
+  }
+
+  account_tags = {
+    "Managed_by" = "AFT"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "XOPS DevOps"
+    change_reason       = "CDS single tenant account creation"
+  }
+
+  custom_fields = {
+    group = "prod"
+    vpc_cidr = "10.50"
+    vpc_name = "cmdb-echo-vpc-prod"
+    vpc_cidr_2 = "10.51"
+    vpc_name_2 = "cmdb-echo-vpc-prod-west"
+  }
+
+  account_customizations_name = "cds"
+}
+
 module "cds2" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "optimise-lattice-isle@xperiencops.com"
-    AccountName               = "cds2-aft"
+    AccountEmail              = "aws-cmdb-bbyit-prod@xops.io"
+    AccountName               = "cmdbbbyit-prod"
     ManagedOrganizationalUnit = "CDS"
     SSOUserEmail              = "chris@xperiencops.com"
     SSOUserFirstName          = "CDS1"
@@ -54,9 +86,9 @@ module "cds2" {
   custom_fields = {
     group = "prod"
     vpc_cidr = "10.45"
-    vpc_name = "cds2-vpc-prod"
+    vpc_name = "cmdbbbyit-prod-vpc-prod"
     vpc_cidr_2 = "10.49"
-    vpc_name_2 = "cds1-vpc-prod-west"
+    vpc_name_2 = "cmdbbbyit-prod-vpc-prod-west"
   }
 
   account_customizations_name = "cds"
