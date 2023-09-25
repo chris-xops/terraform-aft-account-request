@@ -125,3 +125,4 @@ module "xops_platform" {
 
   account_customizations_name = "platform"
 }
+
