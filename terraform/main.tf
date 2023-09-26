@@ -116,11 +116,11 @@ module "platform-sandbox" {
   }
 
   custom_fields = {
-    group = "prod"
+    group = "sandbox"
     vpc_cidr = "10.52"
-    vpc_name = "xops-platform-sandbox-vpc-prod"
+    vpc_name = "xops-platform-sandbox-vpc-sandbos"
     vpc_cidr_2 = "10.53"
-    vpc_name_2 = "xops-platform-sandbox-vpc-prod-west"
+    vpc_name_2 = "xops-platform-sandbox-vpc-sandbox-west"
   }
 
   account_customizations_name = "platform"
@@ -148,11 +148,11 @@ module "cmdb-sandbox" {
   }
 
   custom_fields = {
-    group = "prod"
+    group = "sandbox"
     vpc_cidr = "10.44"
-    vpc_name = "cmdb-sandbox-vpc-prod"
+    vpc_name = "cmdb-sandbox-vpc-sandbox"
     vpc_cidr_2 = "10.48"
-    vpc_name_2 = "cmdb-sandbox-vpc-prod-west"
+    vpc_name_2 = "cmdb-sandbox-vpc-sandbox-west"
   }
 
   account_customizations_name = "cds"
@@ -180,11 +180,11 @@ module "cmdb-sandbox2" {
   }
 
   custom_fields = {
-    group = "prod"
+    group = "sandbox"
     vpc_cidr = "10.54"
-    vpc_name = "cmdb-sandbox-2-vpc-prod"
+    vpc_name = "cmdb-sandbox-2-vpc-sandbox"
     vpc_cidr_2 = "10.55"
-    vpc_name_2 = "cmdb-sandbox-2-vpc-prod-west"
+    vpc_name_2 = "cmdb-sandbox-2-vpc-sandbox-west"
   }
 
   account_customizations_name = "cds"
