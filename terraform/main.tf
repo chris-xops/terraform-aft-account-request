@@ -158,11 +158,11 @@ module "cmdb-sandbox" {
   account_customizations_name = "cds"
 }
 
-/* module "cmdb-sandbox2" {
+module "cmdb-sandbox2" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "aws-cmdb-sandbox@xops.io"
+    AccountEmail              = "aws-sandbox-cmdb-sandbox2@xops.io"
     AccountName               = "cmdb-sandbox2"
     ManagedOrganizationalUnit = "Sandbox"
     SSOUserEmail              = "chris@xperiencops.com"
@@ -188,4 +188,4 @@ module "cmdb-sandbox" {
   }
 
   account_customizations_name = "cds"
-} */
+}
